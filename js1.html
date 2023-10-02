@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js-1</title>
+</head>
+<body>
+    <p>Press Ctrl+shift+i to view the console</p>
+</body>
+<script>
+    function reverse(n)
+{
+    var r;
+    var sum=0;
+    while(n!=0)
+    {
+        r=n%10;
+        sum=sum*10+r;
+        n=Math.floor(n / 10);
+    }
+    console.log("Expected Output : "+sum);
+    return sum;
+}
+var num="32243"
+console.log("Example x = "+num);
+var k=reverse(num)
+
+</script>
+
+</html>

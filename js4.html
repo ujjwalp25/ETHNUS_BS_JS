@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js-4</title>
+    <style>
+       
+        .container
+        {
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            max-width: 500px;
+            text-align: left;
+           
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+         <button id="da">show date</button>
+            <br>
+           <div id="output"></div>
+            <br>
+    
+        <button id="dt">show time</button>
+        <div id="out"></div>
+   </div>
+</body>
+<script>
+    let btnd=document.querySelector("#da");
+    let btnt=document.querySelector("#dt");
+    const months = [
+        "January", "February", "March", "April", "May", "June", "July",
+        "August", "September", "October", "November", "December"
+    ];
+    btnd.addEventListener('click',function()
+    {
+      const date=new Date();
+      let month=months[date.getMonth()];
+      let day=date.getDay()+1;
+      let year=date.getFullYear();
+      let output=document.getElementById("output");
+      output.textContent=day+"/"+month+"/"+year;
+    }
+    );
+    btnt.addEventListener('click',function()
+    {
+        const date=new Date(Date.now());
+        let output=document.getElementById("out");
+        output.textContent=date.toString();
+
+    });
+</script>
+</html>

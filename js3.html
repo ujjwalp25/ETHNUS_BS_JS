@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js-3</title>
+    <style>
+        .container
+        {
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            max-width: 300px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <label for="fno">1st Number :</label>
+        <input type="number" id="fno"><br>
+        <br>  
+        <label for="sno">2nd Number:</label>
+        <input type="number" id="sno">
+        <br>
+        <br>
+        <button id="mul">Multiply</button>&nbsp;
+        <button id="divi">Divide</button>
+        <div id="output">&nbsp;</div>
+        <div id="out"></div>
+
+    </div>
+</body>
+<script>
+    let btnm=document.querySelector("#mul")
+    let btnd=document.querySelector("#divi")
+    btnm.addEventListener('click',function()
+    {
+        let r=0;
+        let fno = parseFloat(document.querySelector("#fno").value);
+        let sno = parseFloat(document.querySelector("#sno").value);
+        let outputElement = document.getElementById("output");
+        let out= document.getElementById("out");
+         r=fno*sno;
+         if (!isNaN(fno) && !isNaN(sno)) {
+            outputElement.textContent = "The Result Is:";
+            out.textContent=r;
+            } else if (isNaN(fno) && isNaN(sno)){
+                outputElement.tagName="Enter valid values";
+            }
+    });
+    btnd.addEventListener('click',function()
+    {
+        let r=0;
+        let fno = parseFloat(document.querySelector("#fno").value);
+        let sno = parseFloat(document.querySelector("#sno").value);
+        let outputElement = document.getElementById("output");
+        let out= document.getElementById("out");
+         r=fno/sno;
+         if (!isNaN(fno) && !isNaN(sno) &&sno!=0) {
+            outputElement.textContent = "The Result Is:";
+            out.textContent=r;
+            } else {
+                outputElement.tagName="Enter valid values";
+            }
+     
+    });
+
+
+
+</script>
+</html>
